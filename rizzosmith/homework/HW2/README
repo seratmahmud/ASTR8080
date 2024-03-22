@@ -1,0 +1,19 @@
+#HW2 information
+ASTR 8080
+Michael Rizzo Smith
+
+This script should be run from the UNIX command terminal,
+
+ex.
+python HW2.py
+
+For all commands which take in RA and Dec max and min values to bound a lat-lon rectangle, all corners should be entered in degrees RA: (0, 360) Dec: (-90, 90).
+
+To plot the lat-lon rectangles the get_area() function mustbe passed a 1 as the last inout otherwise it will return just the area of the passed rectangle.
+The four rectangles plotted for problem number 1 will automatically shift up 20 degrees in declination and thus if your starting minimum declination is greater than 20, it will attempt to plot rectangles with declination higher than 90 which is unphysical. In the future I could add a fix to wrap the increasing rectangles down to -90 if they will exceed 90, but I did not for this assignment. 
+
+The function to randomly populate lat-lon rectangles pulls from a background populated sky of 100000 points. If you wish to increase the number of points this must be changed in the ra_sky and dec_sky variables in the first two lines of the rand_pop() function.
+
+The get_pix() function to create the FITS file from the given data file assumes a specific formatting of HHMMSS.SS+DDMMSS.SS string of object positions. If wanting to use other files the file parsing must be changed to accomodate other data formats. Also, this function will automatically overwrite the FITS file when called,so keep in mind if wanting to maintain specific versions of FITS files.
+
+Lastly, the plot_fits() function will overplot the 5 densest HEALpix pixels in the Nside =4 hierarchy. It would be quick and easy to alter the function to take an argument for number of densest pixels to plot, but for submission I did not real it necessary. 

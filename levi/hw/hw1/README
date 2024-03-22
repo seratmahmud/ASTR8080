@@ -1,0 +1,11 @@
+I am not sure what to put here! the file assumes that the quasar data file is in the same
+directory as the script. I didn't git add in case the file was large. Let me know if the 
+data file should be added usually. All time formats are in yyyy-mm--ddThh:mm:ss where hh is in 24hr
+format. all the functions return things, but the coordinates for the planets/10 years of
+datetimes are not needed, as are the quasar coordinates. utilizes the built in python 
+calendar function which is fun! the whole thing assumes mountain standard time e.g.
+all times are assumed to be TIME + 7 hrs = UTC. All datetimes are returned in UTC.
+All airmasses are calculated from Apache Point Observatory. print statements usually
+have leading/trailing new lines to break up the warnings from generating datetimes.
+The total run time for the script prints at the end. From my tests (depending on how long
+you look at plots) the run time is about 10ish seconds.  
