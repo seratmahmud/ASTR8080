@@ -1,4 +1,0 @@
-Hi Jessie! HW3 should run just using 'python hw3_levischult.py'. I don't know
-why my area estimation is still a bit slow compared to other students. I was able
-to get it down to a minute. Should write platesonly.ply and rectonly.ply to the 
-directory it is run in. times are reported to command line in seconds.
